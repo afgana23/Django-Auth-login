@@ -1,0 +1,12 @@
+{% include "header.html" %}
+
+{% block content %} 
+{% if messages %}
+{% for messages in messages %}
+<div class="alert alert-dark" role="alert">{{messages}}
+     </div>
+
+
+{% endfor %}
+{% endif %}
+{% endblock %}

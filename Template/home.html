@@ -1,0 +1,57 @@
+{% include "base.html" %}
+
+
+
+{% block content %} 
+
+<section id="content">
+<div class="container-fluid">
+  <h1>Welcome to my website</h1>
+  <div class="row">
+    
+    {% if user.is_authenticated %}
+   
+      {% else %}
+    <div class="col-md-6 form-area">
+        <form method="post" action="{% url 'home' %}">
+          {% csrf_token %}
+          <input type="text" name="username"placeholder="username">
+          <input type="text" name="password" placeholder="password">
+          <button type="submit">login</button>
+        </form>
+      {% endif %}
+    </div>
+
+    <div class="col-md-6">
+
+       <div class="row">
+        <div class="col-md-6">
+           
+    {% if user.is_authenticated %}
+    <p> msg:-{{n}}</p>
+    <form method="post" action="{% url 'save' %}">
+     {% csrf_token %}
+     <input type="text" name="cname" placeholder="country_name">
+     <button type="submit">submit</button>
+    
+    </form>
+   
+   
+    {% else %}
+
+        
+          {% endif %}
+        
+          </div>
+        <class="col-md-6">
+          
+         </div>
+    </div>
+
+   </div>
+  </div>
+
+</div>
+</section>
+
+{% endblock %}

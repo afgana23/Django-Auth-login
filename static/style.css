@@ -1,0 +1,19 @@
+#content{
+    padding: 67px 0;
+}
+h1{
+    color: blueviolet;
+}
+.nav-item a{
+    font-size: 23px;
+    color: brown;
+    font-weight: 700;
+}
+.nav{
+    background-color: cadetblue;
+}
+.form-area{
+    width: fit-content;
+    max-height: 500px;
+    background-color: darkseagreen;
+}

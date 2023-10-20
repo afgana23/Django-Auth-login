@@ -1,0 +1,29 @@
+{% include "base.html" %}
+
+
+
+{% block content %} 
+
+<h4>About us
+
+</h4>
+<table border="solid " >
+    <tr>
+    <th>Id</th>
+    <th>Country</th>
+   
+    </tr>
+    {% for n in dbdata %}
+    <tr>
+      <td>{{n.id}}</td>
+    <td>{{n.country_name}}</td>
+    </tr>
+   
+ 
+ <!--<p>{{n.id}} ---{{n.country_name}}</p>-->
+
+
+          {% endfor %}
+        </table>
+
+{% endblock %}
